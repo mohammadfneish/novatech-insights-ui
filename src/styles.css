@@ -1,0 +1,46 @@
+/**
+ * Optional theme tokens for @novatech/insights-ui.
+ *
+ * Components already ship scoped styles with hard-coded fallbacks, so importing this
+ * is optional — use it to theme them via CSS custom properties (and to get dark mode).
+ * Import once in your app:  import '@novatech/insights-ui/style.css'
+ *
+ * Override any token under your own selector to re-brand (e.g. --iui-accent).
+ */
+:root {
+  --iui-accent: #6366f1;
+  --iui-text: #111827;
+  --iui-muted: #6b7280;
+  --iui-border: #e5e7eb;
+  --iui-surface: #ffffff;
+  --iui-code-bg: #f3f4f6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --iui-accent: #818cf8;
+    --iui-text: #f3f4f6;
+    --iui-muted: #9ca3af;
+    --iui-border: #374151;
+    --iui-surface: #1f2937;
+    --iui-code-bg: #0f172a;
+  }
+}
+
+/* Explicit override wins in both directions when the host toggles a theme. */
+[data-theme='light'] {
+  --iui-accent: #6366f1;
+  --iui-text: #111827;
+  --iui-muted: #6b7280;
+  --iui-border: #e5e7eb;
+  --iui-surface: #ffffff;
+  --iui-code-bg: #f3f4f6;
+}
+[data-theme='dark'] {
+  --iui-accent: #818cf8;
+  --iui-text: #f3f4f6;
+  --iui-muted: #9ca3af;
+  --iui-border: #374151;
+  --iui-surface: #1f2937;
+  --iui-code-bg: #0f172a;
+}

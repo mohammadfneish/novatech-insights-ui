@@ -1,0 +1,62 @@
+{
+  "name": "@novatech/insights-ui",
+  "version": "0.1.0",
+  "description": "Framework-light Vue 3 components for AI reporting: SQL report builder, result viewer (table/chart/JSON), Telegram config, schedule form, and AI summary. Bring your own HTTP client — no secrets, no auth baked in.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Novatech",
+  "homepage": "https://github.com/mohammadfneish/novatech-insights-ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohammadfneish/novatech-insights-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mohammadfneish/novatech-insights-ui/issues"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "reporting",
+    "sql",
+    "charts",
+    "telegram",
+    "ai",
+    "insights",
+    "components"
+  ],
+  "sideEffects": [
+    "*.css",
+    "*.vue"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/insights-ui.umd.cjs",
+  "module": "./dist/insights-ui.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/insights-ui.js",
+      "require": "./dist/insights-ui.umd.cjs"
+    },
+    "./style.css": "./dist/insights-ui.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "typecheck": "vue-tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "~5.6.3",
+    "vite": "^6.0.7",
+    "vite-plugin-dts": "^4.4.0",
+    "vue": "^3.5.13",
+    "vue-tsc": "^2.2.0"
+  }
+}
