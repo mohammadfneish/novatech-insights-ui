@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.1
+
+- Build `dist/` on install via a `prepare` script, so the package can be installed
+  directly from GitHub (`npm i github:mohammadfneish/novatech-insights-ui#v0.1.1`)
+  without publishing to npm.
+- Add `.npmignore` so a git install ships `dist/` (the `files` allowlist governs; this
+  stops npm from falling back to `.gitignore`, which excludes `dist`).
+
 ## 0.1.0
 
 Initial release. Extracted from the Novatech AI Reports admin.

@@ -1,0 +1,10 @@
+# Publishing is governed by the "files" allowlist (dist) in package.json. This file
+# exists so npm does NOT fall back to .gitignore (which excludes dist) when packing a
+# git dependency — without it, an install straight from GitHub would ship no dist/.
+node_modules
+src
+.github
+*.log
+tsconfig.json
+vite.config.ts
+.npmrc
